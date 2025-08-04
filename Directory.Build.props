@@ -1,0 +1,73 @@
+﻿<Project>
+    <!--  Versioning  -->
+    <PropertyGroup>
+        <UltralightVersion>1.4.0</UltralightVersion>
+        <GenVersion>$([System.DateTime]::UtcNow.ToString("yyyy.MM.dd.HHmm"))</GenVersion>
+        <AssemblyVersion>$(GenVersion)</AssemblyVersion>
+        <FileVersion>$(GenVersion)</FileVersion>
+        <ProductVersion>$(GenVersion)</ProductVersion>
+        <ApplicationVersion>$(GenVersion)</ApplicationVersion>
+        <InformationalVersion>$(GenVersion)</InformationalVersion>
+        <VersionPrefix>$(GenVersion)</VersionPrefix>
+        <VersionSuffix>$(UltralightVersion)</VersionSuffix>
+    </PropertyGroup>
+    
+    <!--  Metadata  -->
+    <PropertyGroup>
+        <RepositoryUrl>https://github.com/DawnestOfBread/UltralightSharp</RepositoryUrl>
+        <RepositoryType>git</RepositoryType>
+
+        <PublishRepositoryUrl>true</PublishRepositoryUrl>
+        <IncludeSymbols>true</IncludeSymbols>
+        <UseSourceLink>true</UseSourceLink>
+        <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+    </PropertyGroup>
+    
+    <!--  General  -->
+    <PropertyGroup>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+        <IsPackable>false</IsPackable>
+        <Configurations>Release;Debug;</Configurations>
+        <Platforms>x64</Platforms>
+        <PlatformTarget>x64</PlatformTarget>
+        <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+        <AppendRuntimeIdentifierToOutputPath>false</AppendRuntimeIdentifierToOutputPath>
+        <LangVersion>13</LangVersion>
+        <Authors>DawnestOfBread</Authors>
+        <Company>$(Authors)</Company>
+        <NeutralLanguage>en-GB</NeutralLanguage>
+        <TargetFramework>net9.0</TargetFramework>
+    </PropertyGroup>
+     
+    <!--  Directories  -->
+    <PropertyGroup>
+        <NativeLibDirectory>$(MSBuildThisFileDirectory)native/</NativeLibDirectory>
+        <BaseIntermediateOutputPath>$(MSBuildThisFileDirectory)Intermediate\$(MSBuildProjectName)</BaseIntermediateOutputPath>
+        <IntermediateOutputPath>$(BaseIntermediateOutputPath)</IntermediateOutputPath>
+        <MSBUildProjectExtensionsPath>$(BaseIntermediateOutputPath)</MSBUildProjectExtensionsPath>
+
+        <BuildPath>$(MSBuildThisFileDirectory)Build</BuildPath>
+        <BaseOutputPath>$(BuildPath)\$(Configuration)</BaseOutputPath>
+        <OutputPath>$(BaseOutputPath)\bin\</OutputPath>
+    </PropertyGroup>
+
+    <PropertyGroup>
+        <TargetPlatform Condition="$([MSBuild]::IsOsPlatform('Windows'))">win-x64</TargetPlatform>
+        <TargetPlatform Condition="$([MSBuild]::IsOsPlatform('Linux'))">linux-x64</TargetPlatform>
+        <TargetPlatform Condition="$([MSBuild]::IsOsPlatform('OSX'))">osx-x64</TargetPlatform>
+    </PropertyGroup>
+
+    <PropertyGroup Condition="'$(Configuration)' == 'Debug'">
+        <DebugType>full</DebugType>
+        <Optimize>false</Optimize>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Configuration)' == 'Release'">
+        <DebugType>portable</DebugType>
+        <Optimize>true</Optimize>
+    </PropertyGroup>
+    <PropertyGroup>
+        <GenerateAssemblyInfo>true</GenerateAssemblyInfo>
+        <GenerateTargetFrameworkAttribute>false</GenerateTargetFrameworkAttribute>
+    </PropertyGroup>
+</Project>
