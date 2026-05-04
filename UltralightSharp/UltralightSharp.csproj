@@ -4,6 +4,26 @@
         <TargetFramework>net9.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <GenerateDocumentationFile>true</GenerateDocumentationFile>
+        <IncludeDocumentationProjectOutputGroup>true</IncludeDocumentationProjectOutputGroup>
     </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="CppSharp.Runtime" Version="1.1.84.17100" />
+        <PackageReference Include="IDisposableAnalyzers" Version="4.0.8">
+          <PrivateAssets>all</PrivateAssets>
+          <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        </PackageReference>
+        <PackageReference Include="UltralightSharp.Binaries" Version="$(UltralightVersion)"/>
+    </ItemGroup>
+    
+    <ItemGroup>
+        <InternalsVisibleTo Include="Tests" />
+    </ItemGroup>
+    
+    <ItemGroup>
+      <Folder Include="Utils\" />
+    </ItemGroup>
 
 </Project>

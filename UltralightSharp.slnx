@@ -1,0 +1,19 @@
+<Solution>
+  <Folder Name="/Solution Files/">
+    <File Path=".gitignore" />
+    <File Path="Directory.Build.props" />
+  </Folder>
+  <Project Path="Generator/Generator.csproj">
+    <Platform Project="x64" />
+  </Project>
+  <Project Path="Sample/Sample.csproj">
+    <Platform Project="x64" />
+  </Project>
+  <Project Path="Tests/Tests.csproj">
+    <Platform Project="x64" />
+  </Project>
+  <Project Path="UltralightSharp.Binaries/UltralightSharp.Binaries.csproj">
+    <Platform Project="x64" />
+  </Project>
+  <Project Path="UltralightSharp/UltralightSharp.csproj" />
+</Solution>
