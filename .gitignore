@@ -6,4 +6,6 @@ Intermediate/
 riderModule.iml
 /_ReSharper.Caches/
 /publish.bat
-/UltralightSharp.Binaries/runtimes/
+/UltralightSharp.Binaries/runtimes/win-x64/native/
+/UltralightSharp.Binaries/runtimes/osx-x64/native/
+/UltralightSharp.Binaries/runtimes/linux-x64/native/
