@@ -2,6 +2,7 @@
   <Folder Name="/Solution Files/">
     <File Path=".gitignore" />
     <File Path="Directory.Build.props" />
+    <File Path="README.md" />
   </Folder>
   <Project Path="Generator/Generator.csproj">
     <Platform Project="x64" />
