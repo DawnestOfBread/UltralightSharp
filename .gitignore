@@ -1,5 +1,9 @@
 bin/
 obj/
+Build/
+Intermediate/
 /packages/
 riderModule.iml
 /_ReSharper.Caches/
+/publish.bat
+/UltralightSharp.Binaries/runtimes/
