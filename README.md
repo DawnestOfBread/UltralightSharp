@@ -2,7 +2,8 @@
 
 # UltralightSharp
 ### A god-awful .NET wrapper for [Ultralight](https://ultralig.ht/)
-**Ever wanted to use Ultralight right from C#?** Well now you can! It’s barely fast enough, semi-functional, and comes with a generous helping of memory leaks included free of charge!
+**Ever wanted to use Ultralight right from C#?**  
+Well now you can! It’s barely fast enough, semi-functional, and comes with a generous helping of memory leaks included free of charge!
 
 ## Usage
 **Clone the repo and figure it out yourself**  
